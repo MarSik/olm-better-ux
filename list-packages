@@ -1,0 +1,7 @@
+#!/bin/python
+import sqlite3
+con = sqlite3.connect('/database/index.db')
+cur = con.cursor()
+for row in cur.execute('SELECT name, version FROM operatorbundle'):
+    print(row)
+
